@@ -1,5 +1,9 @@
 #include "main.h"
-
+/**
+ * ft_putnbr - print the given character to the standard output
+ * @nb: The integer to be printed
+ *
+ */
 void	ft_putnbr(int nb)
 {
 	if (nb == -2147483648)
@@ -14,8 +18,8 @@ void	ft_putnbr(int nb)
 	}
 	else if (nb >= 10)
 	{
-		ft_putnbr (nb / 10);
-		ft_putnbr (nb % 10);
+		ft_putnbr(nb / 10);
+		ft_putnbr(nb % 10);
 	}
 	else
 		ft_putchar (nb + '0');

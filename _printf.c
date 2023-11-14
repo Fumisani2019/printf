@@ -3,8 +3,11 @@
 /**
  * _printf - Reveives the main string and all the necessary parameters to
  * print a formated string
- * @format A string containing the needed characters
- * Returns: A total count of the characters printed
+ *
+ * The function imitate the behavior of the standard printf function
+ * @format: The format string containing format specfiers
+ *
+ * Returns: The number of characters printed (excluding null byte).
  */
 int _printf(const char *format, ...)
 {
@@ -43,7 +46,8 @@ int _printf(const char *format, ...)
 		}
 		c++;
 		i++;
-		va_end(args);
 	}
+
+	va_end(args);
 	return (c);
 }
